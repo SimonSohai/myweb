@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        #one   {font-family: serif;}
+        #two   {font-family: sans-serif;}
+        #three {font-family: cursive;}
+        #four  {font-family: fantasy;}
+        #five  {font-family: monospace;}
+        #six   {font-family: "Arial Black", monospace;}
+        #seven {font-family: 標楷體, monospace;}
+        #eight {font-family: 娃娃體, 流葉體, monospace;}
+        /* Add a black background color to the top navigation */
+        .topnav {
+        background-color: #333;
+        overflow: hidden;
+        }
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100%; 
+            min-width: 600px; 
+            max-width: 960px;		
+            background: beige;
+            margin: 0 auto;
+        }	
+        header {
+            display:flex;justify-content: center;align-items: center;
+            width: 100%;
+            height: 80px;	  
+            background: #eaeaea;		
+        }	
+        main {
+            width: 51%;
+            height: 400px;
+            background: deepskyblue;
+            float: left;	
+        }
+        img{
+            width: 300px;
+            height:350px;
+        }
+        aside {
+            width: 48%;
+            height: 400px;		
+            background: orange;
+            float: right;	
+        }
+        footer {
+            width: 100%;
+            background: #eaeaea;		
+            clear: both;        
+        }	
+        @media only screen and (max-width:1250px) {
+            aside{
+                flex-wrap: wrap;
+            }
+        }
+     @media only screen and (max-width:700px) {
+        header{
+            font-size: 20px;
+        }
+        main{
+            width: 100%;
+        }
+        aside{
+            width: 100%;
+        }
+        }
+  </style>  
+</head>
+<body>
+    <header><h1 id="seven">113學年度各科成品展</h1></header>
+    <div class="topnav">
+        <a class="active" href="#home">首頁</a>
+        <a href="https://www.coursera.org/learn/c-bian-cheng/home/info">Coursera自學</a>
+        <a href="https://drive.google.com/file/d/1lzvRXOVxmRlldH80Zbr1Kj_iBx8qkI9z/view?usp=sharing">證照</a>
+        <a href="https://drive.google.com/file/d/1Nb5HvTbXazZ28wIESxe-UoFMRSpaH5UX/view?usp=sharing">專題製作</a>
+        <a href="https://nantai-my.sharepoint.com/:u:/g/personal/4b2g0125_office_stust_edu_tw/EWzcTA86EXhLloYEqTCs7_QBGxXF8YWWVMJwM2qwkp2mLw?e=BxG8Bn">聯絡資訊</a>
+    </div>
+    <main>
+        <h1 id="seven">郭子綸</h1>
+        <img src="https://i.imgur.com/g1548eN.jpeg">
+    </main>
+    <aside>
+        <h1 id="seven">作品集</h1>
+        <div>
+            <h1 id="one"><a href="https://nantai-my.sharepoint.com/:u:/g/personal/4b2g0125_office_stust_edu_tw/EUiFMyTHMu9DtFfKmQsGvpwB3Q6LSlcwXC2BPiRO1hQMOw?e=EvMAH5">RWD回應式網站</a></h1>
+            <h1 id="two"><a href="https://docs.google.com/document/d/1jfqHzhg1891mH0jsL_OvvV7qzQoCt59F/edit?usp=sharing&ouid=110433601620042376891&rtpof=true&sd=true">計算機程式</a></h1>
+            <h1 id="two"><a href="https://docs.google.com/document/d/1IRzB6XJ7yBHZhbQPXIkymQtlgSMTFQYj/edit?usp=sharing&ouid=110433601620042376891&rtpof=true&sd=true">物件導向設計</a></h1>
+            <h1 id="two"><a href="https://docs.google.com/document/d/1OGEMfrKcOPH28eWsDHz41S-j_-YEKbG5/edit">金融程式設計與應用(PyThon程式設計)</a></h1>
+        </div>
+    </aside>
+    <footer><h2 id="seven">感謝參閱</h2></footer>
+</body>
+</html>
