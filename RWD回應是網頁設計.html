@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 回應式網頁切版</title>
+    <link rel="stylesheet" type="text/css" href="rwd-layout.css">
+    <style>
+        #seven {font-family: 標楷體, monospace;}
+        .topnav {
+        background-color: #333;
+        overflow: hidden;
+        }
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+        body{
+            background-color: greenyellow;
+        }
+        .headline{
+            font-size: 30px;
+            font-weight:bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .desktop-menu{
+            text-align:center;
+            display: block;
+        }
+        .mobil-menu{
+            text-align: center;
+            display: none;
+        }
+        .list{
+            display:flex;/*讓下一層次水平排列*/
+            justify-content: center;
+        }
+        .item{
+            background-color: pink;
+            flex:none;
+            width:280px;
+            margin:10px;
+        }
+        @media only screen and (max-width:1250px) {
+            .list{
+                flex-wrap: wrap;
+            }
+            .item{
+                width: 45%;
+            }
+        }
+     @media only screen and (max-width:700px) {
+        body{
+            background-color: palevioletred;
+        }
+        .headline{
+            font-size: 20px;
+        }
+        .desktop-menu{
+            display: none;
+        }
+        .mobil-menu{
+            display: block;
+        }
+        .item{
+            width: 90%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header><h1 id="seven">113學年度各科成品展</h1></header>
+    <div class="topnav">
+        <a class="active" href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html">首頁</a>
+        <a href="https://www.coursera.org/learn/c-bian-cheng/home/info">Coursera自學</a>
+        <a href="https://drive.google.com/file/d/1lzvRXOVxmRlldH80Zbr1Kj_iBx8qkI9z/view?usp=sharing">證照</a>
+        <a href="https://drive.google.com/file/d/1Nb5HvTbXazZ28wIESxe-UoFMRSpaH5UX/view?usp=sharing">專題製作</a>
+        <a href="https://nantai-my.sharepoint.com/:u:/g/personal/4b2g0125_office_stust_edu_tw/EWzcTA86EXhLloYEqTCs7_QBGxXF8YWWVMJwM2qwkp2mLw?e=BxG8Bn">聯絡資訊</a>
+    </div>
+    <div class="headline">這是一個回應是網頁設計文字過長的範例</div>
+    <div class="desktop-menu">選項1、選項2、選項3、選項4、選項5、選項6</div>
+    <div class="mobil-menu">
+        <img src="https://i.imgur.com/NlekJE0.jpeg" width="30" height="30" />
+    </div>
+    <div class="list">
+        <div class="item">產品 1</div>
+        <div class="item">產品 2</div>
+        <div class="item">產品 3</div>
+        <div class="item">產品 4</div>
+    </div>
+</body>
+</html>
