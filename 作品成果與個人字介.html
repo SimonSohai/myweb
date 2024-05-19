@@ -1,56 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
-    <style>
-        #one   {font-family: serif;}
-        #two   {font-family: sans-serif;}
-        #three {font-family: cursive;}
-        #four  {font-family: fantasy;}
-        #five  {font-family: monospace;}
-        #six   {font-family: "Arial Black", monospace;}
-        #seven {font-family: 標楷體, monospace;}
-        #eight {font-family: 娃娃體, 流葉體, monospace;}
-        /* Add a black background color to the top navigation */
-        .topnav {
-        position: sticky;
-        top: 15px;
-        height: auto;
-        max-width: 100%;
-        background-color: #333;
-        overflow: hidden;
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>作品成果與個人字介</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#menu_control{
+			position: absolute;
+			z-index: -2;
+			opacity: 0;
+		}
+		.header{
+			position: sticky;
+        	top: 0;
+			height: 50px;
+			background-color: #898989;
+			position: relative;
+		}
+		img{
+			width: 45px;
+			height: 45px;
+		}
+		.logo{
+			width: 60px;
+			height: 40px;
+			margin-left: 10px;
+		}
+		.log a{
+			display: block;
+			height: 40px;
+		}
+		.logo img{
+			display: block;
+		}
+		.menu_btn{
+			width: 40px;
+			height: 40px;
+			background-color:#000 ;
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+		}
+		.menu_btn span{
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+			display: block;
+			overflow: hidden;
+		}
+		.menu_btn::before{
+			content: '';
+			position: absolute;
+			height: 2px;
+			left: 2px;
+			width: 36px;
+			background-color: #ccc;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			box-shadow: 0px 8px 0px #ccc,
+						0px -8px 0px #ccc;
+		}
+		nav{
+			width: 80%;
+			height: calc(100vh - 50px);
+			background-color: rgba(237, 148, 148, 0.941);
+			position: absolute;
+			top: 50px;
+			right: -100%;
+			transition: .8s;
+		}
+		nav a:hover {
+        background-color: white;
+        color: rgba(237, 148, 148, 0.941);
         }
-        /* Style the links inside the navigation bar */
-        .topnav a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        }
-        /* Change the color of links on hover */
-        .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-
-        /* Add a color to the active/current link */
-        .topnav a.active {
-        background-color: #04AA6D;
-        color: white;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
+		nav a{
+			display: block;
+			text-decoration: none;
+			color:white ;
+			padding: 10px 20px;
+			border-bottom: 1px solid white;
+		}
+		#menu_control:checked ~ .header nav{
+			right: 0;
+		}
+		@media screen and (min-width:768px){
+			.menu_btn{display: none;}
+			.header{
+				display: flex;
+				justify-content: space-between;
+				background-color: rgba(237, 148, 148, 0.941);
+				align-items: center;
+			}
+			nav{
+				position: relative;
+				right: 0;
+				display: flex;
+				width: auto;
+				height: auto;
+				top: 0;
+				background-color: transparent;
+			}
+			nav a{
+				border-bottom: none;
+			}
+		}
+		body {
             width: 100%; 
             min-width: 600px; 
             max-width: 960px;		
@@ -69,10 +130,6 @@
             background: deepskyblue;
             float: left;	
         }
-        img{
-            height: 350px;
-            width: 275px;
-        }
         aside {
             width: 48%;
             height: 400px;		
@@ -84,40 +141,35 @@
             background: #eaeaea;		
             clear: both;        
         }	
-        @media only screen and (max-width:1250px) {
-            aside{
-                flex-wrap: wrap;
-            }
-        }
-     @media only screen and (max-width:700px) {
-        header{
-            font-size: 20px;
-        }
-        main{
-            width: 100%;
-        }
-        aside{
-            width: 100%;
-        }
-        }
-  </style>  
+	</style>
 </head>
 <body>
-    <header><h1 id="seven">個人網頁及作品成果展示</h1></header>
-    <div class="topnav">
-        <a class="active" href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html" target="_blank">首頁</a>
+	<header><h1 id="seven">作品成果與個人字介</h1></header>
+	<input type="checkbox" name="" id="menu_control">
+
+	<div class="header">
+		<h1 class="logo">
+			<a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html"target="_blank">
+				<img src="https://i.imgur.com/tCLFr5w.png"></a>
+		</h1>
+		<label for="menu_control" class="menu_btn">
+			<span>選單</span>
+		</label>
+		<nav>
+		<a href="https://simonsohai.github.io/myweb/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html" >書審</a>
         <a href="https://simonsohai.github.io/myself/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9.html">個人介紹</a>
         <a href="https://simonsohai.github.io/learning/%E8%87%AA%E5%AD%B8%E7%B6%B2%E7%AB%99.html">討論與自學網站</a>
         <a href="https://simonsohai.github.io/-01/%E8%AD%89%E7%85%A7.html">證照</a>
         <a href="https://drive.google.com/file/d/1LEexkL4yMiArCTzPWdxPPu22Rj-PsSvq/view?usp=sharing">專題製作</a>
         <a href="https://simonsohai.github.io/-/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A.html">聯絡資訊</a>
-    </div>
-    <main>
+		</nav>
+	</div>
+	<main>
         <h1>郭子綸</h1>
         <img style="width:50%; height:auto; display:inline-block;margin-left:0px;" src="https://i.imgur.com/g1548eN.jpeg">
         <img style="width:50%;height:auto;display:inline-block;margin-left:-4px;" src="https://i.postimg.cc/QxDNYb2r/orig.png">
     </main>
-    <aside>
+	<aside>
         <h1 id="seven">作品集</h1>
         <hr>
         <div>
